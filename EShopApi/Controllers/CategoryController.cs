@@ -24,6 +24,13 @@ namespace EShopApi.Controllers
             return Ok(categories);
         }
         [HttpGet]
+        [Route("GetAllCategoryWithProducts")]
+        public IActionResult GetAllCategoryWithProducts()
+        {
+            var categories = _categoryService.GetAllCategoryWithProducts();
+            return Ok(categories);
+        }
+        [HttpGet]
         [Route("{id}")]
         public IActionResult GetById(int id)
         {

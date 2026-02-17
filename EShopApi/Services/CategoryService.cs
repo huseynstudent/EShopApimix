@@ -1,4 +1,5 @@
-﻿using EShopApi.Entities;
+﻿using EShopApi.DTOs;
+using EShopApi.Entities;
 using EShopApi.Repositories;
 
 namespace EShopApi.Services;
@@ -30,5 +31,9 @@ public class CategoryService
     public List<Category> GetAllCategories()
     {
         return _categoryRepository.GetAll();
+    }
+    public List<GetAllGategoryWithProducts> GetAllCategoryWithProducts()
+    {
+        return _categoryRepository.GetAllCategoryWithProducts();
     }
 }
